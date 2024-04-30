@@ -82,6 +82,14 @@ body {
     display: none;
 }
 
+.correct {
+    background-color: green;
+}
+
+.incorrect {
+    background-color: red;
+}
+
 footer {
     text-align: center;
     margin-top: 40px;

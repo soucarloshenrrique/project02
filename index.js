@@ -1,7 +1,12 @@
-const $startGameButton =document.querySelector(".start-quiz")
-const $questionsContainer =document.querySelector(".questions-container")
+const $startGameButton = document.querySelector(".start-quiz")
+const $questionsContainer = document.querySelector(".questions-container")
+const $answersContainer = document.querySelector(".answers-container")
+const $questionText = document.querySelector(".question")
 
 $startGameButton.addEventListener("click",startGame)
+
+
+let currentQuestionIndex = 0
 
 
 function startGame() {
@@ -10,6 +15,45 @@ function startGame() {
     displayNextQuestion()
 }
 
+function displayNextQuestion() {
+   while(answersContainer.firstChild){
+    $answersContainer.removeChild($answersContainer.firstChild)
+   }
+}
+
+questionText.textContet = questions[currentQuestionIndex].question
+ questions[currentQuestionIndex].answers.forEach(answers=>{
+  const newAnswer = document.createElement("button")
+  newAnswer.classList.add("button", "answer")
+  newAnswer.textContent = answers.text
+  if (answers.correct){
+    newAnswer.dataset.correct = answers.correct
+  }
+  $answersContainer.appendChild(newAnswer)
+
+  newAnswer.addEventListener("click", SelectionAnswer)
+ })
+
+
+ function SelectionAnswer(event) {
+    const answerClicked = event.target
+
+    if (answerClicked.dataset.correct) {
+        document.body.classList.add ("correct")
+    } else {
+        document.body.classList.add("incorrect")
+    } 
+    
+    document.querySelectorAll(".answer").forEach(button => {
+        if (button.dataset.correct){
+            button.classList.add("correct")
+        } else {
+            button.classList.add("incorrect")
+        }
+        
+    })
+}
+ 
 
 
     const questions = [
