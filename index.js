@@ -198,13 +198,13 @@ function SelectionAnswer(event) {
 
        $questionsContainer.innerHTML =
        `
-       <p>
-        You Right ${TotalCorrect} The ${totalQuestion} question!
-        <span> Results: ${message}</span>
-        <button>
-           Retake test 
-        </button>
-       </p>
+          <p  class="final-message">
+             You Right ${totalCorrect} The ${totalQuestion} question!
+             <span> Results: ${message}</span>
+          </span>
+          <button onclick=window.location.reload() class="button">
+             Retake test 
+          </button>
        `
     
     }        
