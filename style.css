@@ -106,3 +106,52 @@ body {
 .incorrect {
     background-color: red;
 }
+
+
+/* Estilos para tablets */
+@media (max-width: 768px) {
+    .button {
+        padding: 12px 24px; /* Botões um pouco menores para economizar espaço */
+        font-size: 14px; /* Fonte um pouco menor */
+    }
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 480px) {
+    .container {
+        width: 95%; /* Utiliza mais espaço da tela */
+        padding: 10px; /* Padding reduzido para mais espaço */
+    }
+
+    .question {
+        font-size: 18px; /* Tamanho de fonte menor para melhor leitura */
+    }
+
+    .answers-container {
+        grid-template-columns: 1fr; /* Empilha os botões verticalmente */
+    }
+
+    .button {
+        padding: 10px 20px; /* Ajuste para botões menores */
+        font-size: 12px; /* Fonte mais pequena para economizar espaço */
+    }
+}
+
+
+/* Geral para todos os dispositivos */
+.button:not(:disabled):hover {
+    filter: brightness(0.9);
+}
+
+.answer:disabled {
+    cursor: not-allowed;
+    filter: grayscale(50%); /* Torna claro que o botão está desabilitado */
+}
+
+.correct {
+    background-color: #4CAF50; /* Cor de fundo para resposta correta */
+}
+
+.incorrect {
+    background-color: #f44336; /* Cor de fundo para resposta incorreta */
+}
