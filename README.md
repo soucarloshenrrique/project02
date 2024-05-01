@@ -21,16 +21,22 @@ This project is an interactive football quiz that allows users to test and expan
 - **Detailed Results**: At the end of the quiz, users can see their overall performance, with options to try again.
 - **Pleasing Visual Aesthetics**: Clean and attractive user interface, using a color palette that is easy on the eyes.
 
-###Images
+### Images
 
 Image:
 
 ![screenshot-top-quiz](./assets/img/screen-shot-website.png)
+
+### Questions Right Screen Shot 
 ![screenshot-question-right](./assets/img/screen-shot-quiz-question-right.png)
+
+### Questions No Right Screen Shot
 ![screenshot-question-no-right](./assets/img/screen-shot-quiz-question-no-right.png)
+
+### Screen Shot Website
 ![screenshot-website](./assets/img/screen-shot-website.png)
-![screenshot-ipad](./assets/img/screen-shot-ipad.png)
-![screenshot-mobile](./assets/img/screen-shot-mobile.png)
+
+### Screen Shot Website Results
 ![screenshot-results-quiz](./assets/img/screen-shot-quiz-results.png)
 
 
@@ -100,11 +106,49 @@ Image:
 ### Validator Testing:
 Accessibility
 
-I confirmed that the colours and fonts chosen are easy to read and accessible by running it through lighthouse in dev tools
+I have used the recommended HTML W3C Validator to validate all of my HTML files.
 [Link-Validator](https://validator.w3.org/)
-[Link-Validator-css](https://jigsaw.w3.org/css-validator/)
-
-![screenshot](./assets/img/validator-w3-css.png)
 ![screenshot](./assets/img/validator-w3-html.png)
+
+I have used the recommended CSS Jigsaw Validator to validate all of my CSS files.
+[Link-Validator-css](https://jigsaw.w3.org/css-validator/)
+![screenshot](./assets/img/validator-w3-css.png)
+
+### Lighthouse Audit
+I have used the recommended Lighthouse Validator to validate all of my files.
 ![screenshot](./assets/img/screen-shot-lighthouse-top.png)
 ![screenshot](./assets/img/screen-shot-lighthouse-middle.png)
+
+##### Responsiveness
+I've tested my deployed project on multiple devices to check for responsiveness issues.
+
+**Mobile Ipad (DevTools)
+![screenshot-ipad](./assets/img/screen-shot-ipad.png)
+
+**Mobile Iphone (DevTools)
+![screenshot-iphone](./assets/img/screen-shot-mobile.png)
+
+**Mobile Samsung(DevTools)
+![screenshot-samsung-s8](./assets/img/screen-shot-samsumg-S8.png)
+
+**Desktop
+![screenshot-desktop](./assets/img/screen-shot-website.png)
+
+---
+### Author:
+Carlos Henrrique
+Student: Code Institute School
+
+---
+
+### Contact Information:
+For inquiries or collaborations, 
+contact Carlos Henrrique via email at carloshenrrique296@gmail.com
+
+[link-email](carloshenrrique296@gmail.com)
+
+[link-repository](https://github.com/soucarloshenrrique/project02.git)
+
+[link-website](https://quiz-project02.netlify.app/)
+
+Carlos Henrrique's Portfolio! 🚀
