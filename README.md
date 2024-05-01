@@ -149,6 +149,6 @@ contact Carlos Henrrique via email at carloshenrrique296@gmail.com
 
 [link-repository](https://github.com/soucarloshenrrique/project02.git)
 
-[link-website](https://quiz-project02.netlify.app/)
+[link-website-quiz](https://quiz-project02.netlify.app/)
 
 Carlos Henrrique's Portfolio! 🚀
