@@ -97,16 +97,19 @@ function finishGame() {
             message = "Study more :("
     }
 
-    $questionsContainer.innerHTML =
-       `
-          <p  class="final-message">
-             You Right ${totalCorrect} The ${totalQuestion} question!
-             <span> Results: ${message}</span>
-          </span>
-          <button onclick=window.location.reload() class="button">
-             Retake test 
-          </button>
-       `
+    $questionsContainer.innerHTML = 
+  `
+    <p class="final-message">
+      Você acertou ${totalCorrect} de ${totalQuestions} questões!
+      <span>Resultado: ${message}</span>
+    </p>
+    <button 
+      onclick=window.location.reload() 
+      class="button"
+    >
+      Refazer teste
+    </button>
+  `
 
 }
 
