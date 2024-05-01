@@ -78,40 +78,39 @@ function SelectionAnswer(event) {
  
 
 function finishGame() {
+    console.log("Finalizando o jogo");
     const totalQuestion = questions.length;
-    const performance = Math.floor(totalCorrect * 100 / totalQuestion)
+    const performance = Math.floor(totalCorrect * 100 / totalQuestion);
+    console.log("Desempenho:", performance);
 
-    let message = ""
-
+    let message = "";
     switch (true) {
         case (performance >= 90):
-            message = "Excellent :)"
-            break
+            message = "Excellent :)";
+            break;
         case (performance >= 70):
-            message = "Very Good :)"
-            break
+            message = "Very Good :)";
+            break;
         case (performance >= 50):
-            message = "Good"
-            break
+            message = "Good";
+            break;
         default:
-            message = "Study more :("
+            message = "Study more :(";
     }
 
-    $questionsContainer.innerHTML = 
-  `
-    <p class="final-message">
-      You Right ${totalCorrect} the ${totalQuestions} question!
-      <span>Results: ${message}</span>
-    </p>
-    <button 
-      onclick=window.location.reload() 
-      class="button"
-    >
-      Refazer test
-    </button>
-  `
-
+    console.log("Mensagem:", message);
+    $questionsContainer.innerHTML =
+    `
+        <p class="final-message">
+            You Right ${totalCorrect} of ${totalQuestion} questions!
+            <span> Results: ${message}</span>
+        </p>
+        <button onclick="window.location.reload()" class="button">
+            Retake test 
+        </button>
+    `;
 }
+
 
 
     const questions = [
