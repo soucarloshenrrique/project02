@@ -62,14 +62,13 @@ function SelectionAnswer(event) {
     } 
     
     document.querySelectorAll(".answer").forEach(button => {
-        if (button.dataset.correct){
+        button.disabled = true
+
+        if (button.dataset.correct) {
             button.classList.add("correct")
         } else {
             button.classList.add("incorrect")
         }
-
-        button.disabled = true
-        
     })
 
     $nextQuestionButton.classList.remove("hide")
@@ -174,22 +173,22 @@ function SelectionAnswer(event) {
     
     function finishGame() {
         const totalQuestion = questions.length;
-        const performance = Math.floor(totalCorrect * 100 / totalQuestion);
+        const performance = Math.floor(totalCorrect * 100 / totalQuestion)
     
-        let message = "";
+        let message = ""
     
         switch (true) {
             case (performance >= 90):
-                message = "Excellent :)";
-                break;
+                message = "Excellent :)"
+                break
             case (performance >= 70):
-                message = "Very Good :)";
-                break;
+                message = "Very Good :)"
+                break
             case (performance >= 50):
-                message = "Good";
-                break;
+                message = "Good"
+                break
             default:
-                message = "Study more :(";
+                message = "Study more :("
         }
     
         return message; // Adicionei uma declaração de retorno para que você possa usar a mensagem fora da função.

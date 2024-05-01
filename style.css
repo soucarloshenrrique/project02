@@ -10,9 +10,8 @@ button {
 }
 
 body {
-    background-color: #000000;
+    background-color: #121214;
     color: #ffffff;
-    padding: 20px;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -20,7 +19,7 @@ body {
 }
 
 .container {
-    background-color: #000000;
+    background-color: #121214;
     width: 90%;
     max-width: 800px;
 
@@ -46,7 +45,7 @@ body {
 
 .question {
     font-size: 24px;
-    font-weight: bolder;
+    font-weight: bold;
     text-align: center;
 }
 
@@ -71,7 +70,7 @@ body {
     border-radius: 6px;
     height: 48px;
     padding: 0 32px;
-    transition: filter 0.2s;
+    transition: filter 0.1s;
 }
 
 .button:not(:disabled):hover {
@@ -82,6 +81,19 @@ body {
     cursor: not-allowed;
 }
 
+/* Finish Game */
+
+.final-message {
+    font-size: 20px;
+    text-align: center;
+}
+
+.final-message span {
+    display: block;
+    margin-top: 8px;
+}
+
+/* General Style */
 
 .hide {
     display: none;
@@ -93,17 +105,4 @@ body {
 
 .incorrect {
     background-color: red;
-}
-
-footer {
-    text-align: center;
-    margin-top: 40px;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-}
-
-/* Efeito de transição suave para componentes interativos */
-button {
-    transition: all 0.3s ease;
 }
