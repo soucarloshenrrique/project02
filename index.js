@@ -100,14 +100,14 @@ function finishGame() {
     $questionsContainer.innerHTML = 
   `
     <p class="final-message">
-      Você acertou ${totalCorrect} de ${totalQuestions} questões!
-      <span>Resultado: ${message}</span>
+      You Right ${totalCorrect} the ${totalQuestions} question!
+      <span>Results: ${message}</span>
     </p>
     <button 
       onclick=window.location.reload() 
       class="button"
     >
-      Refazer teste
+      Refazer test
     </button>
   `
 
@@ -116,7 +116,7 @@ function finishGame() {
 
     const questions = [
         {
-            question: "Quem é o maior artilheiro de todos os tempos da Copa do Mundo da FIFA?",
+            question: "Who is the all-time leading FIFA World Cup scorer?",
             answers: [
                 { text: "Miroslav Klose", correct: true },
                 { text: "Ronaldo Nazário", correct: false },
@@ -125,7 +125,7 @@ function finishGame() {
             ]
         },
         {
-            question: "Qual país ganhou a Copa do Mundo de 2018?",
+            question: "Which country won the 2018 World Cup?",
             answers: [
                 { text: "França", correct: true },
                 { text: "Brasil", correct: false },
@@ -134,7 +134,7 @@ function finishGame() {
             ]
         },
         {
-            question: "Qual jogador ganhou mais Bolas de Ouro?",
+            question: "Which player has won the most Ballon d'Or?",
             answers: [
                 { text: "Lionel Messi", correct: true },
                 { text: "Cristiano Ronaldo", correct: false },
@@ -143,7 +143,7 @@ function finishGame() {
             ]
         },
         {
-            question: "Qual clube venceu mais Liga dos Campeões da UEFA?",
+            question: "Which club has won the most UEFA Champions Leagues?",
             answers: [
                 { text: "Real Madrid", correct: true },
                 { text: "Milan", correct: false },
@@ -152,7 +152,7 @@ function finishGame() {
             ]
         },
         {
-            question: "Qual jogador foi o mais jovem a participar de uma Copa do Mundo?",
+            question: "Which player was the youngest to participate in a World Cup?",
             answers: [
                 { text: "Pelé", correct: false },
                 { text: "Norman Whiteside", correct: true },
@@ -161,7 +161,7 @@ function finishGame() {
             ]
         },
         {
-            question: "Qual time venceu a primeira Copa do Mundo?",
+            question: "Which team won the first World Cup?",
             answers: [
                 { text: "Uruguai", correct: true },
                 { text: "Brasil", correct: false },
@@ -170,7 +170,7 @@ function finishGame() {
             ]
         },
         {
-            question: "Que jogador é conhecido como 'El Pibe de Oro'?",
+            question: "Which player is known as 'El Pibe de Oro'?",
             answers: [
                 { text: "Diego Maradona", correct: true },
                 { text: "Lionel Messi", correct: false },
@@ -179,7 +179,7 @@ function finishGame() {
             ]
         },
         {
-            question: "Qual jogador detém o recorde de mais gols em uma única edição de uma Copa do Mundo?",
+            question: "Which player holds the record for most goals in a single edition of a World Cup?",
             answers: [
                 { text: "Just Fontaine", correct: true },
                 { text: "Ronaldo Nazário", correct: false },
@@ -188,7 +188,7 @@ function finishGame() {
             ]
         },
         {
-            question: "Qual clube é conhecido como 'Os Invencíveis' na Premier League inglesa?",
+            question: "Which club is known as 'The Invincibles' in the English Premier League?",
             answers: [
                 { text: "Chelsea", correct: false },
                 { text: "Manchester United", correct: false },
@@ -197,7 +197,7 @@ function finishGame() {
             ]
         },
         {
-            question: "Quem foi o capitão da seleção espanhola que venceu a Copa do Mundo de 2010?",
+            question: "Who was the captain of the Spanish team that won the 2010 World Cup?",
             answers: [
                 { text: "Xavi Hernandez", correct: false },
                 { text: "Iker Casillas", correct: true },
