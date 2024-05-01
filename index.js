@@ -77,6 +77,39 @@ function SelectionAnswer(event) {
 }
  
 
+function finishGame() {
+    const totalQuestion = questions.length;
+    const performance = Math.floor(totalCorrect * 100 / totalQuestion)
+
+    let message = ""
+
+    switch (true) {
+        case (performance >= 90):
+            message = "Excellent :)"
+            break
+        case (performance >= 70):
+            message = "Very Good :)"
+            break
+        case (performance >= 50):
+            message = "Good"
+            break
+        default:
+            message = "Study more :("
+    }
+
+    $questionsContainer.innerHTML =
+       `
+          <p  class="final-message">
+             You Right ${totalCorrect} The ${totalQuestion} question!
+             <span> Results: ${message}</span>
+          </span>
+          <button onclick=window.location.reload() class="button">
+             Retake test 
+          </button>
+       `
+
+}
+
 
     const questions = [
         {
@@ -168,43 +201,6 @@ function SelectionAnswer(event) {
                 { text: "Sergio Ramos", correct: false },
                 { text: "Andres Iniesta", correct: false }
             ]
-        }
+        },
         
-    ];
-    
-    function finishGame() {
-        const totalQuestion = questions.length;
-        const performance = Math.floor(totalCorrect * 100 / totalQuestion)
-    
-        let message = ""
-    
-        switch (true) {
-            case (performance >= 90):
-                message = "Excellent :)"
-                break
-            case (performance >= 70):
-                message = "Very Good :)"
-                break
-            case (performance >= 50):
-                message = "Good"
-                break
-            default:
-                message = "Study more :("
-        }
-    
-        return message; // Adicionei uma declaração de retorno para que você possa usar a mensagem fora da função.
-    
-    
-
-       $questionsContainer.innerHTML =
-       `
-          <p  class="final-message">
-             You Right ${totalCorrect} The ${totalQuestion} question!
-             <span> Results: ${message}</span>
-          </span>
-          <button onclick=window.location.reload() class="button">
-             Retake test 
-          </button>
-       `
-    
-    }        
+    ]      
