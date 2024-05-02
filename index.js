@@ -20,35 +20,6 @@ function startGame() {
 
 
 
-document.querySelector(".start-quiz").addEventListener("click", function() {
-    document.getElementById("popup").classList.remove("hide"); // Mostra o popup
-  });
-  
-  document.getElementById("submitName").addEventListener("click", function() {
-    const username = document.getElementById("popupUsername").value.trim(); // Pega o nome do usuário e remove espaços extras
-    if (username) {
-      document.getElementById("welcomeMessage").textContent = `Bem-vindo, ${username}!`; // Configura a mensagem de boas-vindas
-      startGame(); // Inicia o jogo
-      document.getElementById("popup").classList.add("hide"); // Esconde o popup
-    } else {
-      alert("Por favor, insira seu nome para começar o quiz."); // Alerta se o nome não for inserido
-    }
-  });
-  
-  document.getElementById("closePopup").addEventListener("click", function() {
-    document.getElementById("popup").classList.add("hide"); // Esconde o popup quando clicar em "Cancelar"
-  });
-  
-
-
-
-
-
-
-
-
-
-
 
 
 
