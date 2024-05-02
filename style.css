@@ -48,9 +48,16 @@ body {
 
 .popup-content p {
     font-size: 18px; /* Tamanho da fonte */
-    color: #333; /* Cor do texto */
+    color: #000000; /* Cor do texto */
     margin-bottom: 10px; /* Espaçamento abaixo do texto */
     text-align: center; /* Alinhamento do texto */
+}
+
+.popup-content input[type="text"] {
+    width: 80%;  /* Aumenta a largura do campo de texto */
+    padding: 10px; /* Adiciona padding para tornar o texto mais confortável para digitar */
+    margin: auto; /* Centraliza o campo de texto dentro do popup */
+    display: block; /* Garante que o input ocupe a própria linha */
 }
 
 
