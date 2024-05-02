@@ -75,27 +75,36 @@ body {
 }
 
 
-.input-error {
-    border: 2px solid #f44336;   /*Cor vermelha para destacar o erro*/
-}
-
 .button:focus, .popup-content input[type="text"]:focus {
     outline: none;
     border-color: #4863f7;
     box-shadow: 0 0 5px #4863f7;
 }
 
-#error-message {
-    display: none;  /* Escondido inicialmente*/
-    color: #f44336;  /* Cor vermelha para destacar o erro*/
-    margin-top: 10px;  /* Espaçamento para separar do input*/
-    text-align: center;  /* Centraliza o texto*/
+.input-error {
+    border: 2px solid #f44336;   /* Cor vermelha para destacar o erro */
 }
+
+#error-message {
+    display: none;  /* Escondido inicialmente */
+    color: #f44336;  /* Cor vermelha para destacar o erro */
+    margin-top: 10px;  /* Espaçamento para separar do input */
+    text-align: center;  /* Centraliza o texto */
+}
+
+
+
 .hide {
     display: none;  /* Garante que hide realmente esconde o elemento*/
 }
 
 
+.user-name-display {
+    color: #ffffff;  /* Cor do texto */
+    font-size: 18px;  /* Tamanho da fonte */
+    margin-bottom: 20px;  /* Espaço abaixo do texto */
+    text-align: center;  /* Centraliza o texto */
+}
 
 
 
