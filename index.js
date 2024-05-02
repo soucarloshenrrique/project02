@@ -3,6 +3,8 @@ const $questionsContainer = document.querySelector(".questions-container")
 const $answersContainer = document.querySelector(".answers-container")
 const $questionText = document.querySelector(".question")
 const $nextQuestionButton = document.querySelector(".next-question")
+const $namePopup = document.querySelector(".name-popup")
+
 
 $startGameButton.addEventListener("click",startGame)
 $nextQuestionButton.addEventListener("click",displayNextQuestion)
@@ -13,13 +15,24 @@ let totalCorrect = 0
 
 
 function startGame() {
-    $startGameButton.classList.add("hide")
-    $questionsContainer.classList.remove("hide")
-    displayNextQuestion()
+    $namePopup.classList.remove("hide");
 }
 
 
+// Nova função para começar o quiz após inserir o nome
+function startQuizWithUsername() {
+    const username = document.querySelector("#username").value;
+    if (username.trim() === "") {
+        alert("Por favor, insira um nome válido.");
+        return;
+    }
+    $namePopup.classList.add("hide");
+    $questionsContainer.classList.remove("hide");
+    displayNextQuestion();
+}
 
+// Atribua o evento ao botão de início no DOMContentLoaded ou no fim do script
+$startGameButton.addEventListener("click", startGame);
 
 
 
