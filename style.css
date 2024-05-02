@@ -18,6 +18,29 @@ body {
     align-items: center;
 }
 
+#usernameForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  #username {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 200px;
+  }
+  
+  button {
+    padding: 8px 16px;
+  }
+  
+
+
+
+
+
+
 .container {
     background-color: #121214;
     width: 90%;

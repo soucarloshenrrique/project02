@@ -18,6 +18,20 @@ function startGame() {
     displayNextQuestion()
 }
 
+document.getElementById('usernameForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const username = document.getElementById('username').value;
+    document.getElementById('welcomeMessage').textContent = `Bem-vindo, ${username}!`;
+    this.style.display = 'none'; // Esconde o formulário após o envio
+  });
+  
+
+
+
+
+
+
+
 function displayNextQuestion() {
     resetState()
 
