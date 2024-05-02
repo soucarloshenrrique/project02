@@ -1,101 +1,93 @@
-const $startGameButton = document.querySelector(".start-quiz")
-const $questionsContainer = document.querySelector(".questions-container")
-const $answersContainer = document.querySelector(".answers-container")
-const $questionText = document.querySelector(".question")
-const $nextQuestionButton = document.querySelector(".next-question")
-const $namePopup = document.querySelector(".name-popup")
+// Seleção dos elementos
+const $startGameButton = document.querySelector(".start-quiz");
+const $questionsContainer = document.querySelector(".questions-container");
+const $answersContainer = document.querySelector(".answers-container");
+const $questionText = document.querySelector(".question");
+const $nextQuestionButton = document.querySelector(".next-question");
+const $namePopup = document.querySelector(".name-popup");
 
+// Eventos
+$startGameButton.addEventListener("click", startGame);
+$nextQuestionButton.addEventListener("click", displayNextQuestion);
 
-$startGameButton.addEventListener("click",startGame)
-$nextQuestionButton.addEventListener("click",displayNextQuestion)
+// Variáveis globais
+let currentQuestionIndex = 0;
+let totalCorrect = 0;
 
-
-let currentQuestionIndex = 0
-let totalCorrect = 0
-
-
+// Função para mostrar o popup e esconder o botão de iniciar
 function startGame() {
-    $namePopup.classList.remove("hide");
+    $namePopup.classList.remove("hide");  // Mostra o popup
+    $startGameButton.classList.add("hide");  // Esconde o botão de início
 }
 
-
-// Nova função para começar o quiz após inserir o nome
+// Função para iniciar o quiz após o usuário inserir o nome
 function startQuizWithUsername() {
     const username = document.querySelector("#username").value;
     if (username.trim() === "") {
         alert("Por favor, insira um nome válido.");
         return;
     }
-    $namePopup.classList.add("hide");
-    $questionsContainer.classList.remove("hide");
-    displayNextQuestion();
+    $namePopup.classList.add("hide");  // Esconde o popup
+    $questionsContainer.classList.remove("hide");  // Mostra o container de perguntas
+    displayNextQuestion();  // Mostra a próxima pergunta
 }
 
-// Atribua o evento ao botão de início no DOMContentLoaded ou no fim do script
-$startGameButton.addEventListener("click", startGame);
-
-
-
-
+// Função para mostrar a próxima pergunta
 function displayNextQuestion() {
-    resetState()
+    resetState();
 
-    if (questions.length === currentQuestionIndex) {
-        return finishGame()
+    if (currentQuestionIndex >= questions.length) {
+        return finishGame();  // Se todas as perguntas foram respondidas, finaliza o jogo
     }
 
- $questionText.textContent = questions[currentQuestionIndex].question
- questions[currentQuestionIndex].answers.forEach(answer => {
-    const newAnswer = document.createElement("button")
-    newAnswer.classList.add("button", "answer")
-    newAnswer.textContent = answer.text
-    if (answer.correct) {
-      newAnswer.dataset.correct = answer.correct
+    $questionText.textContent = questions[currentQuestionIndex].question;
+    questions[currentQuestionIndex].answers.forEach(answer => {
+        const newAnswer = document.createElement("button");
+        newAnswer.classList.add("button", "answer");
+        newAnswer.textContent = answer.text;
+        if (answer.correct) {
+            newAnswer.dataset.correct = answer.correct;
+        }
+        $answersContainer.appendChild(newAnswer);
+
+        newAnswer.addEventListener("click", selectAnswer);
+    });
+}
+
+// Função para resetar o estado para a próxima pergunta
+function resetState() {
+    while ($answersContainer.firstChild) {
+        $answersContainer.removeChild($answersContainer.firstChild);
     }
-    $answersContainer.appendChild(newAnswer)
-  
-    newAnswer.addEventListener("click", SelectionAnswer)
-  })
-  
+    document.body.removeAttribute("class");
+    $nextQuestionButton.classList.add("hide");
+}
 
-} 
-
- function resetState() {
-    while($answersContainer.firstChild){
-        $answersContainer.removeChild($answersContainer.firstChild)
-       }
-    
-    
-    document.body.removeAttribute("class")
-    $nextQuestionButton.classList.add("hide")
- }
-
-
-function SelectionAnswer(event) {
-    const answerClicked = event.target
+// Função para lidar com a seleção de resposta
+function selectAnswer(event) {
+    const answerClicked = event.target;
 
     if (answerClicked.dataset.correct) {
-        document.body.classList.add ("correct")
-        totalCorrect++
+        document.body.classList.add("correct");
+        totalCorrect++;
     } else {
-        document.body.classList.add("incorrect")
-    } 
-    
+        document.body.classList.add("incorrect");
+    }
+
     document.querySelectorAll(".answer").forEach(button => {
-        button.disabled = true
-
+        button.disabled = true;
         if (button.dataset.correct) {
-            button.classList.add("correct")
+            button.classList.add("correct");
         } else {
-            button.classList.add("incorrect")
+            button.classList.add("incorrect");
         }
-    })
+    });
 
-    $nextQuestionButton.classList.remove("hide")
-    currentQuestionIndex++
+    $nextQuestionButton.classList.remove("hide");
+    currentQuestionIndex++;
 }
- 
 
+// Função para finalizar o jogo
 function finishGame() {
     console.log("Finalizando o jogo");
     const totalQuestion = questions.length;
@@ -118,8 +110,7 @@ function finishGame() {
     }
 
     console.log("Mensagem:", message);
-    $questionsContainer.innerHTML =
-    `
+    $questionsContainer.innerHTML = `
         <p class="final-message">
             You Right ${totalCorrect} of ${totalQuestion} questions!
             <span> Results: ${message}</span>
