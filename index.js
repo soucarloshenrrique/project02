@@ -18,13 +18,34 @@ function startGame() {
     displayNextQuestion()
 }
 
-document.getElementById('usernameForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const username = document.getElementById('username').value;
-    document.getElementById('welcomeMessage').textContent = `Bem-vindo, ${username}!`;
-    this.style.display = 'none'; // Esconde o formulário após o envio
+
+
+document.querySelector(".start-quiz").addEventListener("click", function() {
+    document.getElementById("popup").classList.remove("hide");
   });
   
+  document.getElementById("submitName").addEventListener("click", function() {
+    const username = document.getElementById("popupUsername").value.trim();
+    if (username) {
+      document.getElementById("welcomeMessage").textContent = `Bem-vindo, ${username}!`;
+      startGame();
+      document.getElementById("popup").classList.add("hide");
+    } else {
+      alert("Por favor, insira seu nome para começar o quiz.");
+    }
+  });
+  
+  document.getElementById("closePopup").addEventListener("click", function() {
+    document.getElementById("popup").classList.add("hide");
+  });
+  
+
+
+
+
+
+
+
 
 
 
