@@ -60,6 +60,42 @@ body {
     display: block; /* Garante que o input ocupe a própria linha */
 }
 
+.popup-content button {
+    margin-top: 20px;  /* Espaço acima do botão */
+    background-color: #4863f7;  /* Cor de fundo do botão */
+    color: #ffffff;  /* Cor do texto */
+    font-size: 16px;  /* Tamanho da fonte */
+    font-weight: bold;  /* Peso da fonte */
+    border: none;  /* Remove a borda */
+    border-radius: 6px;  /* Arredonda os cantos do botão */
+    height: 48px;  /* Altura do botão */
+    padding: 0 32px;  /* Padding horizontal dentro do botão */
+    transition: filter 0.1s;  /* Transição suave para o efeito de hover */
+    cursor: pointer;  /* Muda o cursor para indicar que é clicável */
+}
+
+
+.input-error {
+    border: 2px solid #f44336;   /*Cor vermelha para destacar o erro*/
+}
+
+.button:focus, .popup-content input[type="text"]:focus {
+    outline: none;
+    border-color: #4863f7;
+    box-shadow: 0 0 5px #4863f7;
+}
+
+#error-message {
+    display: none;  /* Escondido inicialmente*/
+    color: #f44336;  /* Cor vermelha para destacar o erro*/
+    margin-top: 10px;  /* Espaçamento para separar do input*/
+    text-align: center;  /* Centraliza o texto*/
+}
+.hide {
+    display: none;  /* Garante que hide realmente esconde o elemento*/
+}
+
+
 
 
 

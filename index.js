@@ -22,15 +22,25 @@ function startGame() {
 
 // Função para iniciar o quiz após o usuário inserir o nome
 function startQuizWithUsername() {
-    const username = document.querySelector("#username").value;
-    if (username.trim() === "") {
-        alert("Por favor, insira um nome válido.");
-        return;
+    const input = document.querySelector("#username");
+    const username = input.value.trim();  // Remove espaços em branco dos dois lados do texto
+    const errorMessage = document.querySelector("#error-message");  // Selecione o elemento de mensagem de erro
+
+    if (username === "") {
+        errorMessage.textContent = "Por favor, insira um nome válido.";  // Define o texto da mensagem de erro
+        errorMessage.classList.remove("hide");  // Mostra a mensagem de erro
+        input.classList.add("input-error");  // Adiciona a classe de erro ao input
+        return;  // Interrompe a execução da função
+    } else {
+        errorMessage.classList.add("hide");  // Esconde a mensagem de erro
+        input.classList.remove("input-error");  // Remove a classe de erro do input
     }
+
     $namePopup.classList.add("hide");  // Esconde o popup
     $questionsContainer.classList.remove("hide");  // Mostra o container de perguntas
     displayNextQuestion();  // Mostra a próxima pergunta
 }
+
 
 // Função para mostrar a próxima pergunta
 function displayNextQuestion() {

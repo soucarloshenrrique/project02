@@ -14,11 +14,14 @@
 
     <div class="name-popup hide">
         <div class="popup-content">
-            <p>INSIRA O NOME ABAIXO</p> <!-- Texto adicionado aqui -->
+            <p>INSIRA O NOME ABAIXO</p>
+            <label for="username">Por favor, digite seu nome:</label>
             <input type="text" id="username" name="username">
+            <div id="error-message" class="hide">Por favor, insira um nome válido.</div>  <!-- Mensagem de erro adicionada aqui -->
             <button class="button" onclick="startQuizWithUsername()">Começar Quiz</button>
         </div>
     </div>
+    
     
 
     <div class="container">
