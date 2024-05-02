@@ -46,6 +46,13 @@ body {
     display: block;
 }
 
+.popup-content p {
+    font-size: 18px; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+    margin-bottom: 10px; /* Espaçamento abaixo do texto */
+    text-align: center; /* Alinhamento do texto */
+}
+
 
 
 
