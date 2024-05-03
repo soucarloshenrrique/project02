@@ -108,12 +108,18 @@ body {
 
 
 #quiz-image {
-    max-width: 600px;  /* Limita a largura máxima da imagem */
-    height: auto;  /* Mantém a proporção da altura */
-    display: block;  /* Garante que a imagem seja um bloco */
-    margin: 20px auto;  /* Centraliza a imagem horizontalmente e adiciona espaço acima e abaixo */
+    max-width: 300px; /* Reduz a largura máxima da imagem */
+    height: auto; /* Mantém a proporção da altura com base na largura */
+    display: block; /* Garante que a imagem seja exibida como um bloco */
+    margin: 20px auto; /* Centraliza a imagem horizontalmente e adiciona espaço acima e abaixo */
 }
 
+
+.controls-container {
+    text-align: center; /* Centraliza o conteúdo do container */
+    width: 100%; /* Garante que o container ocupe a largura total disponível */
+    margin-top: 20px; /* Adiciona espaço entre a imagem e o botão */
+}
 
 
 
@@ -131,6 +137,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 100vh; /* Altura mínima para ocupar a altura total da viewport */
 }
 
 .questions-container {
