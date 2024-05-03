@@ -108,11 +108,14 @@ body {
 
 
 #quiz-image {
-    max-width: 300px; /* Reduz a largura máxima da imagem */
+    max-width: 300px; /* Largura máxima da imagem */
+    max-height: 200px; /* Altura máxima adicionada */
     height: auto; /* Mantém a proporção da altura com base na largura */
     display: block; /* Garante que a imagem seja exibida como um bloco */
     margin: 20px auto; /* Centraliza a imagem horizontalmente e adiciona espaço acima e abaixo */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
 }
+
 
 
 .controls-container {
