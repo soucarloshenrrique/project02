@@ -128,20 +128,20 @@ body {
 
 .container {
     background-color: #121214;
-    width: 90%;
-    max-width: 800px;
-
-    border: 2px solid #e1e1e6;
+    width: 90%;  /* A largura pode ser ajustada se necessário */
+    max-width: 800px;  /* O máximo de largura do container */
+    border: 2px solid #e1e1e6;  /* Ajustar ou remover essa borda se não for necessária */
     border-radius: 6px;
-    padding: 16px;
+    padding: 16px;  /* Reduzir o padding pode diminuir o espaço interno */
     box-shadow: 0 0 2px 2px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Altura mínima para ocupar a altura total da viewport */
+    margin: auto;
+    margin-top: 20px;
 }
+
 
 .questions-container {
     width: 100%;
