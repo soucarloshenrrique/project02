@@ -16,6 +16,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0; /* Remove a margem padrão */
 }
 
 
@@ -102,19 +103,38 @@ body {
 .user-name-display {
     color: #ffffff;  /* Cor do texto */
     font-size: 20px;  /* Tamanho da fonte */
+    margin-top: 10px; /* Reduz o espaço acima do texto de boas-vindas, se necessário */
     margin-bottom: 20px;  /* Espaço abaixo do texto */
     text-align: center;  /* Centraliza o texto */
 }
 
 
 #quiz-image {
-    max-width: 300px; /* Largura máxima da imagem */
-    max-height: 200px; /* Altura máxima adicionada */
-    height: auto; /* Mantém a proporção da altura com base na largura */
-    display: block; /* Garante que a imagem seja exibida como um bloco */
-    margin: 20px auto; /* Centraliza a imagem horizontalmente e adiciona espaço acima e abaixo */
-    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    width: 100%; /* Garante que a imagem se ajuste à largura do container */
+    max-width: 600px; /* Um máximo para não ficar muito grande em monitores grandes */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 20px auto; /* Centraliza a imagem horizontalmente e adiciona margem vertical */
+    display: block; /* Bloco para permitir margem automática */
+    object-fit: cover; /* Cobrir o espaço designado sem perder proporção */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve para suavizar a borda */
+    filter: blur(1px); /* Desfoque leve para suavizar a imagem */
 }
+
+#quiz-image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+#quiz-image-wrapper::after {
+    content: '';
+    position: absolute;
+    top: -10px; right: -10px; bottom: -10px; left: -10px;
+    background: inherit;
+    filter: blur(10px);
+    z-index: -1;
+}
+
 
 
 
@@ -263,4 +283,18 @@ body {
 
 .incorrect {
     background-color: #f44336; /* Cor de fundo para resposta incorreta */
+}
+
+
+@media (max-width: 768px) {
+    #quiz-image {
+        max-width: 90%; /* Aumenta a largura em dispositivos menores */
+        margin: 10px auto; /* Menos espaço vertical em tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    #quiz-image {
+        max-width: 95%; /* Aumenta a largura em dispositivos muito pequenos */
+    }
 }
