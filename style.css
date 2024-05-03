@@ -107,6 +107,15 @@ body {
 }
 
 
+#quiz-image {
+    max-width: 600px;  /* Limita a largura máxima da imagem */
+    height: auto;  /* Mantém a proporção da altura */
+    display: block;  /* Garante que a imagem seja um bloco */
+    margin: 20px auto;  /* Centraliza a imagem horizontalmente e adiciona espaço acima e abaixo */
+}
+
+
+
 
 .container {
     background-color: #121214;
