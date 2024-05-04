@@ -109,17 +109,32 @@ body {
 }
 
 
-#quiz-image {
-    width: 100%; /* Garante que a imagem se ajuste à largura do container */
+.image-container {
+    position: relative;
+    overflow: hidden;  /* Esconde os excessos do pseudo-elemento */
+    border-radius: 10px; /* Mantém a borda arredondada consistente com a imagem */
+    margin: 20px auto; /* Centraliza o contêiner */
+    width: 90%; /* Ajuste a largura conforme necessário */
     max-width: 600px; /* Um máximo para não ficar muito grande em monitores grandes */
-    height: auto; /* Mantém a proporção da imagem */
-    margin: 20px auto; /* Centraliza a imagem horizontalmente e adiciona margem vertical */
-    display: block; /* Bloco para permitir margem automática */
-    object-fit: cover; /* Cobrir o espaço designado sem perder proporção */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve para suavizar a borda */
-    filter: blur(1px); /* Desfoque leve para suavizar a imagem */
+}    
+
+#quiz-image {
+    width: 100%;
+    height: auto;
+    display: block; /* Assegura que a imagem não tenha espaços extras ao redor */
+    border-radius: 10px; /* Bordas arredondadas para a imagem */
 }
+
+
+.image-container::before {
+    content: '';
+    position: absolute;
+    top: -15px; right: -15px; bottom: -15px; left: -15px;
+    background: inherit;
+    filter: blur(8px);  /* Ajuste o nível de desfoque conforme desejado */
+    z-index: -1;
+}
+
 
 #quiz-image-wrapper {
     position: relative;
