@@ -116,14 +116,14 @@ body {
     display: block;
     width: 60%; /* Redução da largura relativa para ajustar em todas as telas */
     max-width: 200px; /* Redução do máximo de largura para desktop */
-    max-height: 120px; /* Define uma altura máxima para a imagem */
+    max-height: 100px; /* Ajuste a altura máxima para ser menor */
     margin: 20px auto; /* Espaço acima e abaixo para separar dos outros elementos */
     object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
 }    
 
 #quiz-image {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: block; /* Assegura que a imagem não tenha espaços extras ao redor */
     border-radius: 10px; /* Bordas arredondadas para a imagem */
 }
