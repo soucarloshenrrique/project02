@@ -114,8 +114,9 @@ body {
     overflow: hidden;  /* Esconde os excessos do pseudo-elemento */
     border-radius: 10px; /* Mantém a borda arredondada consistente com a imagem */
     margin: 20px auto; /* Centraliza o contêiner */
-    width: 90%; /* Ajuste a largura conforme necessário */
-    max-width: 600px; /* Um máximo para não ficar muito grande em monitores grandes */
+    display: block; /* Assegura que o contêiner se comporte como um bloco */
+    width: 80%; /* Ajuste a largura conforme necessário */
+    max-width: 400px; /* Um máximo para não ficar muito grande em monitores grandes */
 }    
 
 #quiz-image {
@@ -123,6 +124,7 @@ body {
     height: auto;
     display: block; /* Assegura que a imagem não tenha espaços extras ao redor */
     border-radius: 10px; /* Bordas arredondadas para a imagem */
+    margin-bottom: 30px; /* Aumenta a margem inferior da imagem */
 }
 
 
@@ -157,6 +159,7 @@ body {
     text-align: center; /* Centraliza o conteúdo do container */
     width: 100%; /* Garante que o container ocupe a largura total disponível */
     margin-top: 20px; /* Adiciona espaço entre a imagem e o botão */
+    padding-top: 20px; /* Adiciona padding na parte superior do contêiner do botão */
 }
 
 
@@ -302,14 +305,17 @@ body {
 
 
 @media (max-width: 768px) {
+    .image-container {
+        width: 90%; /* Aumenta a largura em telas menores */
+        max-width: 300px; /* Diminui o máximo permitido para a largura */
+    }
+
     #quiz-image {
-        max-width: 90%; /* Aumenta a largura em dispositivos menores */
-        margin: 10px auto; /* Menos espaço vertical em tablets */
+        margin-bottom: 20px; /* Ajusta a margem em dispositivos menores */
+    }
+
+    .controls-container {
+        padding-top: 15px; /* Menos padding em dispositivos menores */
     }
 }
 
-@media (max-width: 480px) {
-    #quiz-image {
-        max-width: 95%; /* Aumenta a largura em dispositivos muito pequenos */
-    }
-}
