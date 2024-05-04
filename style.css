@@ -102,7 +102,7 @@ body {
 
 .user-name-display {
     color: #ffffff;  /* Cor do texto */
-    font-size: 20px;  /* Tamanho da fonte */
+    font-size: 22px;  /* Tamanho da fonte */
     margin-top: 10px; /* Reduz o espaço acima do texto de boas-vindas, se necessário */
     margin-bottom: 20px;  /* Espaço abaixo do texto */
     text-align: center;  /* Centraliza o texto */
@@ -113,10 +113,10 @@ body {
     position: relative;
     overflow: hidden;  /* Esconde os excessos do pseudo-elemento */
     border-radius: 10px; /* Mantém a borda arredondada consistente com a imagem */
-    margin: 20px auto; /* Centraliza o contêiner */
+    margin: 20px auto 30px; /* Centraliza e adiciona margem abaixo da imagem */
     display: block; /* Assegura que o contêiner se comporte como um bloco */
     width: 80%; /* Ajuste a largura conforme necessário */
-    max-width: 400px; /* Um máximo para não ficar muito grande em monitores grandes */
+    max-width: 350px; /* Um máximo para não ficar muito grande em monitores grandes */
 }    
 
 #quiz-image {
@@ -159,7 +159,6 @@ body {
     text-align: center; /* Centraliza o conteúdo do container */
     width: 100%; /* Garante que o container ocupe a largura total disponível */
     margin-top: 20px; /* Adiciona espaço entre a imagem e o botão */
-    padding-top: 20px; /* Adiciona padding na parte superior do contêiner do botão */
 }
 
 
@@ -319,3 +318,10 @@ body {
     }
 }
 
+@media (min-width: 992px) { /* Estilos para telas de desktop grandes */
+    .image-container {
+        max-width: 300px; /* Limita o tamanho da imagem em desktops */
+        margin-top: 10px; /* Reduz a margem superior para uma visão mais compacta */
+        margin-bottom: 20px; /* Espaço entre a imagem e o botão 'Start Quiz' */
+    }
+}
