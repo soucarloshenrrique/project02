@@ -114,7 +114,10 @@ body {
     overflow: hidden;
     border-radius: 10px;
     display: block;
-    margin: 20px auto; /* Margem ajustada */
+    width: 30%; /* Percentual base para todas as vistas */
+    max-width: 180px; /* Máximo para desktops */
+    max-height: 100px; /* Altura máxima coerente */
+    margin: 20px auto;
     object-fit: cover;
 }    
 
@@ -297,29 +300,28 @@ body {
 }
 
 
-/* Ajustes para desktops grandes */
+/* Ajustes para dispositivos grandes */
 @media (min-width: 992px) {
     .image-container {
-        width: 30%; /* Ajuste para um valor percentual menor */
-        max-width: 180px; /* Redução da largura máxima */
-        max-height: 100px; /* Redução da altura máxima */
+        max-width: 180px; /* Mantendo a largura moderada em grandes telas */
+        max-height: 100px; /* Altura fixa para grandes telas */
     }
 }
 
 /* Ajustes para tablets */
 @media (max-width: 768px) {
     .image-container {
-        width: 50%; /* Maior para melhor visualização em tablets */
-        max-width: 200px;
-        max-height: 150px;
+        width: 50%; /* Aumenta para melhor visibilidade em tablets */
+        max-width: 200px; /* Largura máxima para tablets */
+        max-height: 150px; /* Altura proporcional */
     }
 }
 
 /* Ajustes para dispositivos móveis */
 @media (max-width: 480px) {
     .image-container {
-        width: 80%; /* Uso máximo do espaço disponível em dispositivos móveis */
-        max-width: 140px; /* Limitando o tamanho mesmo em telas pequenas */
-        max-height: 90px;
+        width: 80%; /* Aumenta o uso do espaço disponível */
+        max-width: 140px; /* Adequação para pequenas telas */
+        max-height: 90px; /* Altura reduzida para dispositivos móveis */
     }
 }
