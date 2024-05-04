@@ -111,12 +111,14 @@ body {
 
 .image-container {
     position: relative;
-    overflow: hidden;  /* Esconde os excessos do pseudo-elemento */
-    border-radius: 10px; /* Mantém a borda arredondada consistente com a imagem */
-    margin: 20px auto; /* Centraliza e adiciona margem abaixo da imagem */
-    display: block; /* Assegura que o contêiner se comporte como um bloco */
-    width: 60%; /* Ajuste a largura conforme necessário */
-    max-width: 250px; /* Um máximo para não ficar muito grande em monitores grandes */
+    overflow: hidden; /* Esconde partes da imagem que excedem o contêiner */
+    border-radius: 10px; /* Bordas arredondadas */
+    display: block;
+    width: 50%; /* Redução da largura relativa para ajustar em todas as telas */
+    max-width: 200px; /* Redução do máximo de largura para desktop */
+    max-height: 150px; /* Define uma altura máxima para a imagem */
+    margin: 20px auto; /* Espaço acima e abaixo para separar dos outros elementos */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
 }    
 
 #quiz-image {
@@ -124,7 +126,6 @@ body {
     height: auto;
     display: block; /* Assegura que a imagem não tenha espaços extras ao redor */
     border-radius: 10px; /* Bordas arredondadas para a imagem */
-    margin-bottom: 30px; /* Aumenta a margem inferior da imagem */
 }
 
 
@@ -283,8 +284,9 @@ body {
     }
 
     .image-container {
-        width: 95%; /* Ocupa quase toda a largura em dispositivos muito pequenos */
-        max-width: 180px; /* Ajuste conforme necessário para não ocupar demais */
+        width: 80%; /* Utiliza mais espaço da tela em dispositivos pequenos */
+        max-width: 180px; /* Ajuste para garantir que não fique muito pequeno */
+        max-height: 160px; /* Ajusta a altura para pequenos dispositivos */
     }
 
     #quiz-image {
@@ -315,8 +317,9 @@ body {
 
 @media (max-width: 768px) {
     .image-container {
-        width: 80%; /* Aumenta a largura em telas menores */
-        max-width: 200px; /* Diminui o máximo permitido para a largura */
+        width: 60%; /* Maior que em desktops para melhor visualização */
+        max-width: 250px; /* Um pouco maior que no desktop */
+        max-height: 180px; /* Ajusta a altura para ser proporcional na tela de tablet */
     }
 
     #quiz-image {
@@ -330,9 +333,8 @@ body {
 
 @media (min-width: 992px) { /* Estilos para telas de desktop grandes */
     .image-container {
-        max-width: 300px; /* Limita o tamanho da imagem em desktops */
-        margin-top: 10px; /* Reduz a margem superior para uma visão mais compacta */
-        margin-bottom: 20px; /* Espaço entre a imagem e o botão 'Start Quiz' */
+        max-width: 200px; /* Reduz ainda mais para telas grandes */
+        max-height: 150px; /* Mantém a altura máxima constante */
     }
 }
 
