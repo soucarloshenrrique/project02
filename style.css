@@ -114,16 +114,16 @@ body {
     overflow: hidden; /* Esconde partes da imagem que excedem o contêiner */
     border-radius: 10px; /* Bordas arredondadas */
     display: block;
-    width: 50%; /* Redução da largura relativa para ajustar em todas as telas */
+    width: 60%; /* Redução da largura relativa para ajustar em todas as telas */
     max-width: 200px; /* Redução do máximo de largura para desktop */
-    max-height: 150px; /* Define uma altura máxima para a imagem */
+    max-height: 120px; /* Define uma altura máxima para a imagem */
     margin: 20px auto; /* Espaço acima e abaixo para separar dos outros elementos */
     object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
 }    
 
 #quiz-image {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block; /* Assegura que a imagem não tenha espaços extras ao redor */
     border-radius: 10px; /* Bordas arredondadas para a imagem */
 }
@@ -285,8 +285,8 @@ body {
 
     .image-container {
         width: 80%; /* Utiliza mais espaço da tela em dispositivos pequenos */
-        max-width: 180px; /* Ajuste para garantir que não fique muito pequeno */
-        max-height: 160px; /* Ajusta a altura para pequenos dispositivos */
+        max-width: 140px; /* Ajuste para garantir que não fique muito pequeno */
+        max-height: 90px; /* Ajusta a altura para pequenos dispositivos */
     }
 
     #quiz-image {
@@ -317,9 +317,8 @@ body {
 
 @media (max-width: 768px) {
     .image-container {
-        width: 60%; /* Maior que em desktops para melhor visualização */
-        max-width: 250px; /* Um pouco maior que no desktop */
-        max-height: 180px; /* Ajusta a altura para ser proporcional na tela de tablet */
+        max-width: 150px; /* Um pouco maior que no desktop */
+        max-height: 100px; /* Ajusta a altura para ser proporcional na tela de tablet */
     }
 
     #quiz-image {
