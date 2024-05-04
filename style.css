@@ -109,17 +109,17 @@ body {
 }
 
 
+/* Imagem do quiz com restrições claras para garantir tamanho menor */
 .image-container {
+    width: 200px; /* Largura fixa para todas as vistas */
+    max-height: 150px; /* Altura máxima fixa */
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    display: block;
-    width: 30%; /* Percentual base para todas as vistas */
-    max-width: 180px; /* Máximo para desktops */
-    max-height: 100px; /* Altura máxima coerente */
     margin: 20px auto;
-    object-fit: cover;
-}    
+    display: flex;
+    justify-content: center;
+}
 
 #quiz-image {
     width: 100%;
@@ -132,7 +132,7 @@ body {
 .image-container::before {
     content: '';
     position: absolute;
-    top: -15px; right: -15px; bottom: -15px; left: -15px;
+    top: -10px; right: -10px; bottom: -10px; left: -10px;
     background: inherit;
     filter: blur(8px);  /* Ajuste o nível de desfoque conforme desejado */
     z-index: -1;
@@ -303,25 +303,23 @@ body {
 /* Ajustes para dispositivos grandes */
 @media (min-width: 992px) {
     .image-container {
-        max-width: 180px; /* Mantendo a largura moderada em grandes telas */
-        max-height: 100px; /* Altura fixa para grandes telas */
+        width: 200px; /* Reduzindo a largura em grandes telas para torná-la menor */
+        max-height: 150px;
     }
 }
 
 /* Ajustes para tablets */
 @media (max-width: 768px) {
     .image-container {
-        width: 50%; /* Aumenta para melhor visibilidade em tablets */
-        max-width: 200px; /* Largura máxima para tablets */
-        max-height: 150px; /* Altura proporcional */
+        width: 180px; /* Redução adicional para tablets */
+        max-height: 135px;
     }
 }
 
 /* Ajustes para dispositivos móveis */
 @media (max-width: 480px) {
     .image-container {
-        width: 80%; /* Aumenta o uso do espaço disponível */
-        max-width: 140px; /* Adequação para pequenas telas */
-        max-height: 90px; /* Altura reduzida para dispositivos móveis */
+        width: 160px; /* Redução para dispositivos móveis */
+        max-height: 120px;
     }
 }
