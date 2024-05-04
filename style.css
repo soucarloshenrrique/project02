@@ -113,10 +113,10 @@ body {
     position: relative;
     overflow: hidden;  /* Esconde os excessos do pseudo-elemento */
     border-radius: 10px; /* Mantém a borda arredondada consistente com a imagem */
-    margin: 20px auto 30px; /* Centraliza e adiciona margem abaixo da imagem */
+    margin: 20px auto; /* Centraliza e adiciona margem abaixo da imagem */
     display: block; /* Assegura que o contêiner se comporte como um bloco */
-    width: 80%; /* Ajuste a largura conforme necessário */
-    max-width: 350px; /* Um máximo para não ficar muito grande em monitores grandes */
+    width: 60%; /* Ajuste a largura conforme necessário */
+    max-width: 250px; /* Um máximo para não ficar muito grande em monitores grandes */
 }    
 
 #quiz-image {
@@ -281,6 +281,16 @@ body {
         padding: 10px 20px; /* Ajuste para botões menores */
         font-size: 12px; /* Fonte mais pequena para economizar espaço */
     }
+
+    .image-container {
+        width: 95%; /* Ocupa quase toda a largura em dispositivos muito pequenos */
+        max-width: 180px; /* Ajuste conforme necessário para não ocupar demais */
+    }
+
+    #quiz-image {
+        margin-bottom: 15px; /* Ajuste a margem para manter espaço suficiente */
+    }
+
 }
 
 
@@ -305,8 +315,8 @@ body {
 
 @media (max-width: 768px) {
     .image-container {
-        width: 90%; /* Aumenta a largura em telas menores */
-        max-width: 300px; /* Diminui o máximo permitido para a largura */
+        width: 80%; /* Aumenta a largura em telas menores */
+        max-width: 200px; /* Diminui o máximo permitido para a largura */
     }
 
     #quiz-image {
@@ -325,3 +335,4 @@ body {
         margin-bottom: 20px; /* Espaço entre a imagem e o botão 'Start Quiz' */
     }
 }
+
