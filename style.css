@@ -111,14 +111,11 @@ body {
 
 .image-container {
     position: relative;
-    overflow: hidden; /* Esconde partes da imagem que excedem o contêiner */
-    border-radius: 10px; /* Bordas arredondadas */
+    overflow: hidden;
+    border-radius: 10px;
     display: block;
-    width: 40%; /* Redução da largura relativa para ajustar em todas as telas */
-    max-width: 150px; /* Redução do máximo de largura para desktop */
-    max-height: 100px; /* Ajuste a altura máxima para ser menor */
-    margin: 20px auto; /* Espaço acima e abaixo para separar dos outros elementos */
-    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    margin: 20px auto; /* Margem ajustada */
+    object-fit: cover;
 }    
 
 #quiz-image {
@@ -255,21 +252,6 @@ body {
 }
 
 
-/* Estilos para tablets */
-@media (max-width: 768px) {
-    .button {
-        padding: 12px 24px; /* Botões um pouco menores para economizar espaço */
-        font-size: 14px; /* Fonte um pouco menor */
-    }
-}
-
-/* Estilos para dispositivos móveis */
-@media (max-width: 480px) {
-    .container {
-        width: 95%; /* Utiliza mais espaço da tela */
-        padding: 10px; /* Padding reduzido para mais espaço */
-    }
-
     .question {
         font-size: 18px; /* Tamanho de fonte menor para melhor leitura */
     }
@@ -293,7 +275,7 @@ body {
         margin-bottom: 15px; /* Ajuste a margem para manter espaço suficiente */
     }
 
-}
+
 
 
 /* Geral para todos os dispositivos */
@@ -315,25 +297,29 @@ body {
 }
 
 
+/* Ajustes para desktops grandes */
+@media (min-width: 992px) {
+    .image-container {
+        width: 30%; /* Ajuste para um valor percentual menor */
+        max-width: 180px; /* Redução da largura máxima */
+        max-height: 100px; /* Redução da altura máxima */
+    }
+}
+
+/* Ajustes para tablets */
 @media (max-width: 768px) {
     .image-container {
-        max-width: 150px; /* Um pouco maior que no desktop */
-        max-height: 100px; /* Ajusta a altura para ser proporcional na tela de tablet */
-    }
-
-    #quiz-image {
-        margin-bottom: 20px; /* Ajusta a margem em dispositivos menores */
-    }
-
-    .controls-container {
-        padding-top: 15px; /* Menos padding em dispositivos menores */
+        width: 50%; /* Maior para melhor visualização em tablets */
+        max-width: 200px;
+        max-height: 150px;
     }
 }
 
-@media (min-width: 992px) { /* Estilos para telas de desktop grandes */
+/* Ajustes para dispositivos móveis */
+@media (max-width: 480px) {
     .image-container {
-        max-width: 150px; /* Reduz ainda mais para telas grandes */
-        max-height: 100px; /* Mantém a altura máxima constante */
+        width: 80%; /* Uso máximo do espaço disponível em dispositivos móveis */
+        max-width: 140px; /* Limitando o tamanho mesmo em telas pequenas */
+        max-height: 90px;
     }
 }
-
