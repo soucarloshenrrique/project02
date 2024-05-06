@@ -108,6 +108,11 @@ body {
     text-align: center;  /* Centraliza o texto */
 }
 
+#viewers {
+    margin-bottom: 20px; /* Ajuste o valor conforme necessário para mais ou menos espaço */
+}
+
+
 
 /* Imagem do quiz com restrições claras para garantir tamanho menor */
 .image-container {
@@ -321,5 +326,11 @@ body {
     .image-container {
         width: 160px; /* Redução para dispositivos móveis */
         max-height: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    #viewers {
+        margin-bottom: 10px; /* Menor espaço em dispositivos móveis */
     }
 }
