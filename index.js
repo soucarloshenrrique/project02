@@ -20,6 +20,29 @@ function startGame() {
     $startGameButton.classList.add("hide");  // Esconde o botão de início
 }
 
+
+
+document.querySelectorAll("#viewers span")[0].innerHTML = getUsersView();
+
+setInterval(() => {
+    updatesUsersView();
+}, 2500);
+
+function getUsersView() {
+    return Math.floor(Math.random() * (Math.floor(910) - Math.ceil(690))) + Math.ceil(690);
+}
+
+function updatesUsersView() {
+    var currentUsers = document.querySelectorAll("#viewers span")[0].innerHTML;
+    var users = Math.floor(Math.random() * (Math.floor(40) - Math.ceil(-40))) + Math.ceil(-40);
+    currentUsers = parseInt(currentUsers) < 690 ? parseInt(currentUsers) + users * user : parseInt(currentUsers) + users;
+    document.querySelectorAll("#viewers span")[0].innerHTML = currentUsers;
+}
+
+
+
+
+
 // Função para iniciar o quiz após o usuário inserir o nome
 function startQuizWithUsername() {
     const input = document.querySelector("#username");
