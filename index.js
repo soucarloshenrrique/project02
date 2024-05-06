@@ -62,7 +62,7 @@ function startQuizWithUsername() {
     // Adiciona o nome do usuário ao novo elemento
     document.getElementById("user-name").textContent = username; // *** Adicione esta linha ***
     document.getElementById("quiz-image").style.display = 'none'; // Oculta a imagem
-
+    document.getElementById("viewers").style.display = 'none'; // Adiciona esta linha para ocultar o contador
 
     $namePopup.classList.add("hide"); // Esconde o popup
     $questionsContainer.classList.remove("hide"); // Mostra o container de perguntas
