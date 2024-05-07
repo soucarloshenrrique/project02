@@ -59,10 +59,6 @@ function startQuizWithUsername() {
         input.classList.remove("input-error"); // Remove a classe de erro do input
     }
     
-    // Existing setup code
-    document.querySelector('.progress-bar-fill').style.width = '0%'; // Reset progress bar at start
-    document.querySelector('.progress-bar').style.display = 'block'; // Show progress bar
-    displayNextQuestion();
 
     // Adiciona o nome do usuário ao novo elemento
     document.getElementById("user-name").textContent = username; // *** Adicione esta linha ***
@@ -83,12 +79,10 @@ function displayNextQuestion() {
 
     if (currentQuestionIndex >= questions.length) {
         return finishGame();  // Se todas as perguntas foram respondidas, finaliza o jogo
-        
-       var progress = ((currentQuestionIndex + 1) / totalQuestions) * 100;
-       document.querySelector('.progress-bar-fill').style.width = `${progress}%`;
-    
-       // Existing code to display questions
     }
+
+    const progressPercent = ((currentQuestionIndex + 1) / questions.length) * 100; // Calculate progress
+    document.querySelector('.progress-bar-fill').style.width = `${progressPercent}%`; // Update progress bar
 
     $questionText.textContent = questions[currentQuestionIndex].question;
     questions[currentQuestionIndex].answers.forEach(answer => {
@@ -143,7 +137,6 @@ function finishGame() {
     const totalQuestion = questions.length;
     const performance = Math.floor(totalCorrect * 100 / totalQuestion);
     console.log("Desempenho:", performance);
-
     document.querySelector('.progress-bar').style.display = 'none'; // Hide the progress bar
     // Show results and other end-of-game logic
 
