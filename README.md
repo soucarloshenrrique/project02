@@ -3,10 +3,30 @@
 ## Description
 This project is an interactive football quiz that allows users to test and expand their knowledge about the most popular sport in the world. The quiz covers a variety of topics, including historical records, famous players, and significant events from football competitions.
 
+## Resources
+
+- **Friendly Interface**: The user interface is clean and intuitive, making the quiz easy to navigate and use for users of all ages.
+
+- **Interactive Answer**: The quiz offers immediate feedback after each answer, indicating whether the user got it right or wrong and providing the correct answer.
+
+- **Viewer Counter**: A unique feature that shows the number of people currently "watching" the quiz, increasing the feeling of competition and engagement.
+
+- **Visual Aesthetics**: Uses colors and visual styles that are pleasing and keep users engaged.
+
+
 ## Technologies Used
 - **HTML5**: For the basic structure of the quiz.
 - **CSS3**: For styling and responsive layouts.
 - **JavaScript**: For interactive quiz logic.
+
+
+### Project Structure
+## HTML
+The index.html file includes the entire basic structure of the quiz, with clearly marked divisions for:
+
+- **Initial** popup for entering the user name.
+- **Question** container that becomes visible after starting the game.
+- **Buttons** to start the quiz and for the next question.
 
 ## File Structure
 - `index.html`: The main page of the quiz.
@@ -21,23 +41,37 @@ This project is an interactive football quiz that allows users to test and expan
 - **Detailed Results**: At the end of the quiz, users can see their overall performance, with options to try again.
 - **Pleasing Visual Aesthetics**: Clean and attractive user interface, using a color palette that is easy on the eyes.
 
+
+## How to use
+
+- **Start the Quiz**: The user enters their name and clicks the "Start Quiz" button.
+- **Answer Questions**: Questions are presented one by one, with multiple choices for each question.
+- **Immediate Feedback**: After each response, the user receives instant feedback.
+- **Finish**: At the end of the questions, the user sees their score and can choose to restart the quiz.
+
 ### Images
 
 Image:
 
-![screenshot-top-quiz](./assets/img/screen-shot-website.png)
+![screenshot-top-quiz](./assets/img/screen-shot-desktoop.png)
+
+### Popup Forms 
+![screenshot-popup](./assets/img/popup-form.jpg)
 
 ### Questions Right Screen Shot 
-![screenshot-question-right](./assets/img/screen-shot-quiz-question-right.png)
+![screenshot-question-right](./assets/img/question-right.jpg)
 
 ### Questions No Right Screen Shot
-![screenshot-question-no-right](./assets/img/screen-shot-quiz-question-no-right.png)
+![screenshot-question-no-right](./assets/img/question-no-right.jpg)
 
 ### Screen Shot Website
 ![screenshot-website](./assets/img/screen-shot-website.png)
 
 ### Screen Shot Website Results
-![screenshot-results-quiz](./assets/img/screen-shot-quiz-results.png)
+![screenshot-results-quiz](./assets/img/results-final.jpg)
+
+### Screen Shot Website Countdown
+![screenshot-results-quiz](./assets/img/countdown-people.jpg)
 
 
 ## Quiz Questions
@@ -116,8 +150,8 @@ I have used the recommended CSS Jigsaw Validator to validate all of my CSS files
 
 ### Lighthouse Audit
 I have used the recommended Lighthouse Validator to validate all of my files.
-![screenshot](./assets/img/screen-shot-lighthouse-top.png)
-![screenshot](./assets/img/screen-shot-lighthouse-middle.png)
+![screenshot](./assets/img/screen-shot-validator-w3-update.png)
+![screenshot](./assets/img/screen-shot-validator-w3-update-.png)
 
 ##### Responsiveness
 I've tested my deployed project on multiple devices to check for responsiveness issues.
@@ -126,13 +160,13 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 ![screenshot-ipad](./assets/img/screen-shot-ipad.png)
 
 **Mobile Iphone (DevTools)
-![screenshot-iphone](./assets/img/screen-shot-mobile.png)
+![screenshot-iphone](./assets/img/screen-shot-mobile-model.jpeg)
 
 **Mobile Samsung(DevTools)
-![screenshot-samsung-s8](./assets/img/screen-shot-samsumg-S8.png)
+![screenshot-samsung-s8](./assets/img/screen-shot-samsung-s-8.png)
 
 **Desktop
-![screenshot-desktop](./assets/img/screen-shot-website.png)
+![screenshot-desktop](./assets/img/screen-shot-desktoop.png)
 
 ---
 ### Author:
