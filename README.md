@@ -64,9 +64,6 @@ Image:
 ### Questions No Right Screen Shot
 ![screenshot-question-no-right](./assets/img/question-no-right.jpg)
 
-### Screen Shot Website
-![screenshot-website](./assets/img/screen-shot-website.png)
-
 ### Screen Shot Website Results
 ![screenshot-results-quiz](./assets/img/results-final.jpg)
 
