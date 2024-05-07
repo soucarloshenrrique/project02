@@ -233,6 +233,24 @@ body {
     cursor: not-allowed;
 }
 
+
+.progress-bar {
+    width: 100%;
+    background-color: #ddd;
+    height: 10px;
+    border-radius: 5px;
+}
+
+.progress-bar-fill {
+    background-color: #4CAF50;
+    height: 100%;
+    width: 0%; /* Start with no fill */
+    border-radius: 5px;
+    transition: width 0.5s ease-in-out;
+}
+
+
+
 /* Finish Game */
 
 .final-message {
